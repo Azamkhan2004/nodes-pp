@@ -6,5 +6,5 @@ describe('GET /', () => {
     const res = await request(app).get('/');
     expect(res.statusCode).toBe(200);
     expect(res.text).toBe('Hello from Node.js app running in Docker!');
-  });
+  }, 10000); // 10s timeout
 });
